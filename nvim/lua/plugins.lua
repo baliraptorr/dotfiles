@@ -42,16 +42,16 @@ return packer.startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
 }
 
-  use "christianchiarulli/nvim-cmp"
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-emoji"
-  use "hrsh7th/cmp-nvim-lua"
-  use "williamboman/nvim-lsp-installer"
-  use "neovim/nvim-lspconfig"
+  --use "hrsh7th/nvim-cmp"
+  --use "hrsh7th/cmp-buffer" -- buffer completions
+  --use "hrsh7th/cmp-path" -- path completions
+  --use "hrsh7th/cmp-cmdline" -- cmdline completions
+  --use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  --use "hrsh7th/cmp-nvim-lsp"
+  --use "hrsh7th/cmp-emoji"
+  --use "hrsh7th/cmp-nvim-lua"
+  --use "williamboman/nvim-lsp-installer"
+  --use "neovim/nvim-lspconfig"
 
   use {
   'kyazdani42/nvim-tree.lua',
