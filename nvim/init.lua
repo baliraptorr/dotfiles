@@ -14,6 +14,8 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>r", ":GoRun<cr>", opts)
 keymap("n", "<C-s>", "<Esc>:w<cr>", opts)
 
+keymap("n", "<C-v>", ":vsplit<cr>", opts)
+
 local options = {
     backup = false,                          -- creates a backup file
     clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
@@ -144,7 +146,8 @@ cmp.setup({
   mapping = {
   ['<Tab>'] = cmp.mapping.confirm({select = true}),
   ['<Up>'] = cmp.mapping.select_prev_item(select_opts),
-  ['<Down>'] = cmp.mapping.select_next_item(select_opts)
+  ['<Down>'] = cmp.mapping.select_next_item(select_opts),
+  ['<C-e>'] = cmp.mapping.abort(),
 }
 })
 
