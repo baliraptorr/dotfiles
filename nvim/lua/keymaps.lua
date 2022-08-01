@@ -16,5 +16,3 @@ keymap("n", "<leader>r", ":GoRun<cr>", opts)
 --save
 keymap("n", "<C-s>", "<Esc>:w<cr>", opts)
 
---split
-keymap("n", "<C-v>", ":vsplit<cr>", opts)

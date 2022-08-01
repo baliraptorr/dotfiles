@@ -63,4 +63,11 @@ return packer.startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use "fatih/vim-go"
-end)
+
+  use {
+    "goolord/alpha-nvim",
+    config = function()
+      require("alpha").setup()
+    end,
+  }
+ end)

@@ -2,7 +2,7 @@
 require "plugins"
 require "options"
 require "keymaps"
-
+require "alpha"
 
 vim.cmd[[colorscheme tokyonight]]
 
