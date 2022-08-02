@@ -64,10 +64,10 @@ return packer.startup(function(use)
   }
   use "fatih/vim-go"
 
-  use {
-    "goolord/alpha-nvim",
-    config = function()
-      require("alpha").setup()
-    end,
-  }
+  --use {
+    --"goolord/alpha-nvim",
+    --config = function()
+      --require("alpha").setup()
+    --end,
+  --} doesnt work as of now gotta fix it later
  end)
