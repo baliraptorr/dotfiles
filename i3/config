@@ -22,6 +22,8 @@ set $mod Mod1
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
+default_border pixel 1
+default_floating_border pixel 1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -53,7 +55,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id kitty && exit
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -189,6 +191,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bindsym $mod+y         exec --no-startup-id jgmenu --at-pointer
+
 #COLORS
 
 # class                 border  bground text    indicator child_border
@@ -222,5 +226,6 @@ exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --right-of D
 
 #wallpaper
 exec_always --no-startup-id feh --bg-fill $HOME/Downloads/0001.jpg
+#exec_always --no-startup-id picom -b -f
 
 

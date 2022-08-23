@@ -11,7 +11,7 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 --GoRun
-keymap("n", "<leader>r", ":GoRun<cr>", opts)
+--keymap("n", "<leader>r", ":GoRun<cr>", opts)
 
 --save
 keymap("n", "<C-s>", "<Esc>:w<cr>", opts)

@@ -4,7 +4,11 @@ require "options"
 require "keymaps"
 require "alpha"
 
-vim.cmd[[colorscheme tokyonight]]
+vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
+
+require("catppuccin").setup()
+
+vim.cmd [[colorscheme catppuccin]]
 
 -- Setup nvim-cmp.
 local status_ok, npairs = pcall(require, "nvim-autopairs")
@@ -103,6 +107,7 @@ require('lualine').get_config()
 require("nvim-lsp-installer").setup {}
 
 require'lspconfig'.gopls.setup{}
+require'lspconfig'.clangd.setup{}
 
 
 local cmp = require'cmp'
@@ -142,3 +147,9 @@ lsp_installer.settings({
     }
 })
 
+require'nvim-treesitter.configs'.setup{
+
+    highlight = {
+        enable = true,
+    }
+}
