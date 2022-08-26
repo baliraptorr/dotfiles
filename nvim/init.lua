@@ -42,6 +42,7 @@ npairs.setup {
 
 -- OR setup with some options
 require("nvim-tree").setup({
+    sync_root_with_cwd = true,
   sort_by = "case_sensitive",
   view = {
     adaptive_size = true,
