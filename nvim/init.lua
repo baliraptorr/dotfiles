@@ -4,11 +4,6 @@ require "options"
 require "keymaps"
 require "alpha"
 
-vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
-
-require("catppuccin").setup()
-
-vim.cmd [[colorscheme catppuccin]]
 
 -- Setup nvim-cmp.
 local status_ok, npairs = pcall(require, "nvim-autopairs")
@@ -16,6 +11,10 @@ if not status_ok then
   return
 end
 
+local ok, catppuccin = pcall(require, "catppuccin")
+if not ok then return end
+catppuccin.setup {}
+vim.cmd [[colorscheme catppuccin]]
 
 npairs.setup {
   check_ts = true,
@@ -153,4 +152,16 @@ require'nvim-treesitter.configs'.setup{
     highlight = {
         enable = true,
     }
+}
+
+local action_state = require('telescope.actions.state') -- runtime (Plugin) exists somewhere as lua/telescope/actions/state.lua
+require('telescope').setup{
+  defaults = {
+      prompt_prefix = "$ ",
+      mappings = {
+          i = {
+            ["<c-a>"] = function() print(vim.inspect(action_state.get_selected_entry())) end 
+          }        
+      }
+  }
 }

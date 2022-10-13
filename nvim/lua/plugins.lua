@@ -49,6 +49,10 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
+    
+    use 'nvim-lua/popup.nvim'
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-telescope/telescope.nvim'
 
  use {
   'kyazdani42/nvim-tree.lua',
@@ -64,12 +68,12 @@ return packer.startup(function(use)
   }
 
   use 'nvim-treesitter/nvim-treesitter'
-  use { "catppuccin/nvim", as = "catppuccin" }
-
+    use { "catppuccin/nvim", as = "catppuccin"}
   --use {
     --"goolord/alpha-nvim",
     --config = function()
       --require("alpha").setup()
     --end,
   --} doesnt work as of now gotta fix it later
+  --
  end)
